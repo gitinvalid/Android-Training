@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">M05</string>
+    <string name="item000000">可口可乐</string>
+    <string name="item000001">雪碧</string>
+    <string name="item000002">苹果</string>
+    <string name="item000003">荔枝</string>
+    <string name="nothing">啥也不是</string>
+    <string name="check_out">结算</string>
+    <string name="reset">重置</string>
+</resources>
