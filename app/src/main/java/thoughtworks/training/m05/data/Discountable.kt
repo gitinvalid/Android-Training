@@ -7,6 +7,6 @@ interface Discountable {
 class BuyTwoSendOne : Discountable {
 
     override fun discount(item: ShoppingCartItem): Float {
-        return item.run { (sum % 2) * goods.price }
+        return item.run { (sum - sum / 3) * goods.price }
     }
 }
