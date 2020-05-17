@@ -70,10 +70,6 @@ class GoodsViewModel : ViewModel() {
         _shoppingCartLD.value = _shoppingCart
     }
 
-    fun onNothingClick() {
-        throw IllegalStateException("Please remove nothing component from the showing page")
-    }
-
     fun onResetClick() {
         _shoppingCart.items.clear()
         _shoppingCartLD.value = _shoppingCart

@@ -58,14 +58,14 @@
             android:id="@+id/item000003"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{viewmodel.item000003LD.goods.name}"
-            android:textColor="@android:color/primary_text_light"
+            android:layout_marginTop="@dimen/default_padding"
             android:background="@drawable/button"
             android:onClick="@{() -> viewmodel.onItem000003Added()}"
-            android:layout_marginTop="@dimen/default_padding"
-            app:layout_constraintTop_toBottomOf="@id/nothing"
+            android:text="@{viewmodel.item000003LD.goods.name}"
+            android:textColor="@android:color/primary_text_light"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/item000002" />
 
         <ScrollView
             android:id="@+id/checkout_container"
@@ -100,19 +100,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-
-        <Button
-            android:id="@+id/nothing"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/nothing"
-            android:textColor="@android:color/primary_text_light"
-            android:background="@drawable/button"
-            android:layout_marginTop="@dimen/default_padding"
-            android:onClick="@{() -> viewmodel.onNothingClick()}"
-            app:layout_constraintTop_toBottomOf="@id/item000002"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
