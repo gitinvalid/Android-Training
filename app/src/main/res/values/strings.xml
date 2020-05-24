@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">M07</string>
+    <string name="start_content">start</string>
+    <string name="restart_content">restart</string>
+    <string name="stop_content">stop</string>
+    <string name="resume_content">resume</string>
+</resources>
