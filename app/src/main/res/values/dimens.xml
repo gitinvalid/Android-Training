@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_padding">20dp</dimen>
+    <dimen name="advice_height">180dp</dimen>
+    <dimen name="advice_margin_bottom">20dp</dimen>
+    <dimen name="refresh_button_width">150dp</dimen>
+</resources>

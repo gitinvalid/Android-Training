@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/layout_padding"
+    android:paddingRight="@dimen/layout_padding"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/advice"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/advice_height"
+        android:layout_marginBottom="@dimen/advice_margin_bottom"
+        android:text="@string/advice_default_content"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/refresh"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="@dimen/refresh_button_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/refresh_button"
+        android:textSize="18sp" />
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">M09</string>
+    <string name="advice_default_content">Please click refresh button</string>
+    <string name="refresh_button">Refresh</string>
+</resources>
