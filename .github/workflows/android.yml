@@ -1,0 +1,51 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ M10 ]
+  pull_request:
+    branches: [ M10 ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone Repo
+      uses: actions/checkout@v2
+    - name: Setup java JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Run Lint
+      run: ./gradlew lint --continue
+
+  test:
+    runs-on: ubuntu-latest
+    needs: [lint]
+    steps:
+    - name: Clone Repo
+      uses: actions/checkout@v2
+    - name: Setup java JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Run Test
+      run: ./gradlew test
+
+  buildAndRelease:
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    steps:
+    - name: Clone Repo
+      uses: actions/checkout@v2
+    - name: Setup java JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Build package
+      run: ./gradlew assembleDebug
+    - name: Release package
+      uses: actions/upload-artifact@v2
+      with:
+          name: debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
