@@ -43,9 +43,9 @@ jobs:
       with:
         java-version: 1.8
     - name: Build package
-      run: ./gradlew assembleRelease
+      run: ./gradlew assembleDebug
     - name: Release package
       uses: actions/upload-artifact@v2
       with:
           name: application.apk
-          path: app/build/outputs/apk/release/app-release.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
